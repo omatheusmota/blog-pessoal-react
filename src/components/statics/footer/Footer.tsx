@@ -3,37 +3,34 @@ import GitHubIcon from '@mui/icons-material/GitHub';
 import MusicNoteOutlinedIcon from '@mui/icons-material/MusicNoteOutlined';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import {Typography, Box, Grid} from '@mui/material';
+import './Footer.css'
 
 function Footer() {
     return (
         <>
             <Grid container direction="row" justifyContent="center" alignItems="center">
                 <Grid alignItems="center" item xs={12}>
-                    <Box style={{ backgroundColor: "#3F51B5", height: "120px" }}>
-                        <Box paddingTop={1} display="flex" alignItems="center" justifyContent="center">
-                            <Typography variant="h5" align="center" gutterBottom style={{ color: "white" }}>Me siga nas redes sociais </Typography>
+                    <Box className='box1'>
+                        <Box paddingTop={1.3} display="flex" alignItems="center" justifyContent="center">
+                        
                         </Box>
                         <Box display="flex" alignItems="center" justifyContent="center">
                             <a href="https://www.last.fm/pt/user/omatheusmota" target="_blank">
-                                <MusicNoteOutlinedIcon style={{ fontSize: 60, color: "white" }} />
+                                <MusicNoteOutlinedIcon className='redes'/>
                             </a>
                             <a href="https://github.com/omatheusmota" target="_blank">
-                                <GitHubIcon style={{ fontSize: 60, color: "white" }} />
+                                <GitHubIcon className='redes'/>
                             </a>
-                            <a href="https://www.linkedin.com/school/generationbrasil/" target="_blank">
-                                <LinkedInIcon style={{ fontSize: 60, color: "white" }} />
+                            <a href="https://www.linkedin.com/in/omatheusmota" target="_blank">
+                                <LinkedInIcon className='redes'/>
                             </a>
                         </Box>
                     </Box>
-                    <Box style={{ backgroundColor: "#303F9F", height: "60px" }}>
-                        <Box paddingTop={1}>
-                            <Typography variant="subtitle2" align="center" gutterBottom style={{ color: "white" }} >© 2020 Copyright:</Typography>
+                    <Box className='box2'>
+                        <Box paddingTop={1.3}>
+                            <Typography variant="subtitle2" align="center" gutterBottom className='textos'>Matheus Mota © 2022</Typography>
                         </Box>
-                        <Box>
-                            <a target="_blank" href="https://brasil.generation.org">
-                                <Typography variant="subtitle2" gutterBottom style={{ color: "white" }} align="center">brasil.generation.org</Typography>
-                            </a>
-                        </Box>
+                    
                     </Box>
                 </Grid>
             </Grid>
