@@ -1,5 +1,5 @@
 import { Box } from '@mui/material'
-import { Button, Grid, TextField, Typography } from '@material-ui/core'
+import { Button, Grid, TextField, Typography } from '@mui/material'
 
 import './Home.css'
 
