@@ -27,22 +27,22 @@ function Login() {
         })
     }
 
-        useEffect(()=>{
-            if(token != ''){
-                navigate('/home')
-            }
-        }, [token])
+    useEffect(() => {
+        if (token != '') {
+            navigate('/home')
+        }
+    }, [token])
 
-    async function onSubmit(e: ChangeEvent<HTMLFormElement>){
+    async function onSubmit(e: ChangeEvent<HTMLFormElement>) {
         e.preventDefault();
-        try{
+        try {
             await login(`/usuarios/logar`, userLogin, setToken)
 
             alert('Usuário logado com sucesso!');
-        } catch(error){
+        } catch (error) {
             alert('Dados do usuários incorretos.');
         }
-         
+
 
     }
 
@@ -56,9 +56,9 @@ function Login() {
                         <TextField value={userLogin.senha} onChange={(e: ChangeEvent<HTMLInputElement>) => updateModel(e)} id='senha' label='senha' variant='outlined' name='senha' margin='normal' type='password' fullWidth />
                         <Box marginTop={2} textAlign='center'>
 
-                                <Button type='submit' variant='contained' color='primary'>
-                                    Logar
-                                </Button>
+                            <Button type='submit' variant='contained' color='primary'>
+                                Logar
+                            </Button>
 
                         </Box>
                     </form>
