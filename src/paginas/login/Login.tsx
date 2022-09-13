@@ -5,6 +5,8 @@ import useLocalStorage from 'react-use-localstorage';
 import { login } from '../../services/Service';
 import UserLogin from '../../models/UserLogin';
 import './Login.css';
+import { toast } from 'react-toastify';
+
 
 function Login() {
     let navigate = useNavigate();
@@ -38,9 +40,25 @@ function Login() {
         try {
             await login(`/usuarios/logar`, userLogin, setToken)
 
-            alert('Usuário logado com sucesso!');
+            toast.success('✨ Usuário logado com sucesso ✨', {
+                position: "top-center",
+                autoClose: 3000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+                });
         } catch (error) {
-            alert('Dados do usuários incorretos.');
+            toast.error('❌ Dados do usuário incorretos ❌', {
+                position: "top-center",
+                autoClose: 3000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+                });
         }
 
 

@@ -5,6 +5,8 @@ import Tema from '../../../models/Tema';
 import './ListaTemas.css';
 import useLocalStorage from 'react-use-localstorage';
 import { busca } from '../../../services/Service';
+import { toast } from 'react-toastify';
+
 
 function ListaTemas() {
   const [temas, setTemas] = useState<Tema[]>([])
@@ -13,7 +15,15 @@ function ListaTemas() {
 
   useEffect(() => {
     if (token == "") {
-      alert("Você precisa estar logado!")
+      toast.error('❌ Você precisa estar logado ❌', {
+        position: "top-center",
+        autoClose: 3000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        });
       history("/login")
     }
   }, [token])

@@ -8,6 +8,7 @@ import TabPostagens from '../../components/postagens/tabpostagens/TabPostagens';
 import { TokenState } from '../../store/tokens/tokensReducer';
 import './Home.css';
 import { Link } from 'react-router-dom';
+import { toast } from 'react-toastify';
 
 function Home() {
 
@@ -18,7 +19,15 @@ function Home() {
 
     useEffect(() => {
         if (token == "") {
-            alert("Você precisa estar logado")
+            toast.error('❌ Você precisa estar logado ❌', {
+                position: "top-center",
+                autoClose: 3000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+                });
             history("/login")
 
         }
