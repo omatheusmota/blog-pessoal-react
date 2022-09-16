@@ -30,7 +30,7 @@ function Login() {
     }
 
     useEffect(() => {
-        if (token != '') {
+        if (token !== '') {
             navigate('/home')
         }
     }, [token])
@@ -48,7 +48,7 @@ function Login() {
                 pauseOnHover: true,
                 draggable: true,
                 progress: undefined,
-                });
+            });
         } catch (error) {
             toast.error('❌ Dados do usuário incorretos ❌', {
                 position: "top-center",
@@ -58,7 +58,7 @@ function Login() {
                 pauseOnHover: true,
                 draggable: true,
                 progress: undefined,
-                });
+            });
         }
 
 
