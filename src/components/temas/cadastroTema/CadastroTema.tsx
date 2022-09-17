@@ -21,7 +21,7 @@ function CadastroTema() {
 
     useEffect(() => {
         if (token == "") {
-            toast.error('❌ Você precisa estar logado ❌', {
+            toast.error('Você precisa estar logado.', {
                 position: "top-center",
                 autoClose: 3000,
                 hideProgressBar: false,
@@ -68,7 +68,7 @@ function CadastroTema() {
                     'Authorization': token
                 }
             })
-            toast.success('✨ Tema atualizado com sucesso ✨', {
+            toast.success('Tema atualizado com sucesso.', {
                 position: "top-center",
                 autoClose: 3000,
                 hideProgressBar: false,
@@ -84,7 +84,7 @@ function CadastroTema() {
                     'Authorization': token
                 }
             })
-            toast.success('✨ Tema cadastrado com sucesso ✨', {
+            toast.success('Tema cadastrado com sucesso.', {
                 position: "top-center",
                 autoClose: 3000,
                 hideProgressBar: false,

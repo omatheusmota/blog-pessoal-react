@@ -18,7 +18,7 @@ function DeletarTema() {
 
   useEffect(() => {
     if (token == "") {
-      toast.error('❌ Você precisa estar logado ❌', {
+      toast.error('Você precisa estar logado.', {
         position: "top-center",
         autoClose: 3000,
         hideProgressBar: false,
@@ -53,7 +53,7 @@ function DeletarTema() {
         'Authorization': token
       }
     });
-    toast.success('✨ Tema deletado com sucesso ✨', {
+    toast.success('Tema deletado com sucesso.', {
       position: "top-center",
       autoClose: 3000,
       hideProgressBar: false,

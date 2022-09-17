@@ -17,7 +17,7 @@ function CadastroPost() {
 
     useEffect(() => {
         if (token == "") {
-            toast.error('❌ Você precisa estar logado ❌', {
+            toast.error('Você precisa estar logado.', {
                 position: "top-center",
                 autoClose: 3000,
                 hideProgressBar: false,
@@ -92,7 +92,7 @@ function CadastroPost() {
                     'Authorization': token
                 }
             })
-            toast.success('✨ Postagem atualizada com sucesso ✨', {
+            toast.success('Postagem atualizada com sucesso.', {
                 position: "top-center",
                 autoClose: 3000,
                 hideProgressBar: false,
@@ -107,7 +107,7 @@ function CadastroPost() {
                     'Authorization': token
                 }
             })
-            toast.success('✨ Postagem cadastrada com sucesso ✨', {
+            toast.success('Postagem cadastrada com sucesso.', {
                 position: "top-center",
                 autoClose: 3000,
                 hideProgressBar: false,

@@ -14,9 +14,7 @@ function Login() {
     const [userLogin, setUserLogin] = useState<UserLogin>(
         {
             id: 0,
-            nome: '',
             usuario: '',
-            foto: '',
             senha: '',
             token: ''
         }
@@ -38,9 +36,8 @@ function Login() {
     async function onSubmit(e: ChangeEvent<HTMLFormElement>) {
         e.preventDefault();
         try {
-            await login(`/usuarios/logar`, userLogin, setToken)
-
-            toast.success('✨ Usuário logado com sucesso ✨', {
+            await login(`/usuarios/logar`, userLogin, setToken);
+            toast.success('Usuário logado com sucesso.', {
                 position: "top-center",
                 autoClose: 3000,
                 hideProgressBar: false,
@@ -50,7 +47,7 @@ function Login() {
                 progress: undefined,
             });
         } catch (error) {
-            toast.error('❌ Dados do usuário incorretos ❌', {
+            toast.error('Dados do usuário incorretos.', {
                 position: "top-center",
                 autoClose: 3000,
                 hideProgressBar: false,
@@ -69,9 +66,9 @@ function Login() {
             <Grid alignItems='center' xs={6}>
                 <Box paddingX={20}>
                     <form onSubmit={onSubmit}>
-                        <Typography variant='h3' gutterBottom color='textPrimary' component='h3' align='center' className='textos1'>Entrar</Typography>
-                        <TextField value={userLogin.usuario} onChange={(e: ChangeEvent<HTMLInputElement>) => updateModel(e)} id='usuario' label='usuario' variant='outlined' name='usuario' margin='normal' fullWidth />
-                        <TextField value={userLogin.senha} onChange={(e: ChangeEvent<HTMLInputElement>) => updateModel(e)} id='senha' label='senha' variant='outlined' name='senha' margin='normal' type='password' fullWidth />
+                        <Typography variant='h3' gutterBottom color='textPrimary' component='h3' align='center' className='textos1'>ENTRAR</Typography>
+                        <TextField value={userLogin.usuario} onChange={(e: ChangeEvent<HTMLInputElement>) => updateModel(e)} id='usuario' label='Usuário' variant='outlined' name='usuario' margin='normal' fullWidth />
+                        <TextField value={userLogin.senha} onChange={(e: ChangeEvent<HTMLInputElement>) => updateModel(e)} id='senha' label='Senha' variant='outlined' name='senha' margin='normal' type='password' fullWidth />
                         <Box marginTop={2} textAlign='center'>
 
                             <Button type='submit' variant='contained' color='primary'>

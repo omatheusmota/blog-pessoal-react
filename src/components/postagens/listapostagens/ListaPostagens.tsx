@@ -17,7 +17,7 @@ function ListaPostagens() {
 
   useEffect(() => {
     if (token == "") {
-      toast.error('❌ Você precisa estar logado ❌', {
+      toast.error('Você precisa estar logado.', {
         position: "top-center",
         autoClose: 3000,
         hideProgressBar: false,
